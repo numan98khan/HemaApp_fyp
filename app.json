@@ -1,0 +1,12 @@
+{
+  "name": "fyp",
+  "displayName": "fyp",
+  "expo": {
+    "name": "fyp",
+    "slug": "fyp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
