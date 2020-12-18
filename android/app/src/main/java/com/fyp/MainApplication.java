@@ -6,6 +6,7 @@ import android.net.Uri;
 
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.arthenica.reactnative.RNFFmpegPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -39,10 +40,21 @@ public class MainApplication extends Application implements ReactApplication {
       return BuildConfig.DEBUG;
     }
 
+  // @Override
+  // protected List<ReactPackage> getPackages() {
+  //   return Arrays.<ReactPackage>asList(
+  //       new MainReactPackage(),
+  //       new BitmapReactPackage() // <---
+  //   );
+  // }
+
     @Override
     protected List<ReactPackage> getPackages() {
       List<ReactPackage> packages = new PackageList(this).getPackages();
       packages.add(new ModuleRegistryAdapter(mModuleRegistryProvider));
+      // packages.add(new MainReactPackage(mModuleRegistryProvider));
+      // packages.add(new BitmapReactPackage(mModuleRegistryProvider));
+      
       return packages;
     }
 
@@ -74,6 +86,8 @@ public class MainApplication extends Application implements ReactApplication {
   public ReactNativeHost getReactNativeHost() {
     return mReactNativeHost;
   }
+
+  
 
   @Override
   public void onCreate() {
